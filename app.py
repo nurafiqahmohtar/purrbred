@@ -47,7 +47,7 @@ model.add(Activation("relu"))
 model.add(Dense(5))
 model.add(Activation('softmax'))
 model.compile(loss='categorical_crossentropy', optimizer='Adam',metrics=["accuracy"])
-model.load_weights('static\model_weights.h5')
+model.load_weights('static/model_weights.h5')
 
 COUNT = 0
 app = Flask(__name__)
