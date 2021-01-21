@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>PURRBRED</title>
+        <meta charset="UTF-8">
+        <link href="static/style.css" rel="stylesheet">
+        
+        <!-- Google font -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="static/bootstrap.min.css"/>
+        <link rel="stylesheet" href="static/font-awesome.min.css"/>
+        <link rel="stylesheet" href="static/owl.carousel.min.css"/>
+        <link rel="stylesheet" href="static/slicknav.min.css"/>
+    </head>
+    <body>
+        <header class="header-section clearfix">
+            <a href="/" class="site-logo">
+                <h2 style="font-size:25px; color:#ffffff; margin-left: 40px"><span style="color:#fc0254">PURR</span>BRED</h2>
+            </a>
+            <ul class="main-menu" >
+                <li><a href="{{url_for('info')}}" style="font-size: 18px">Home</a></li>
+                <li><a href="/" style="font-size: 18px">Classify</a></li>
+                <li><a href="{{url_for('about')}}" style="font-size: 18px">About</a></li>
+            </ul>
+        </header>
+    <section class="contact-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 p-0" align="right">
+                    <div class="map" style="margin-top: 60px;">
+                        <img src="{{url_for('static', filename='picture1.png')}}" align="middle" />
+                    </div>
+                </div>
+                <div class="col-lg-6 p-0">
+                    <div class="contact-warp">
+                        <div class="section-title mb-0">
+                            <h2 style="font-family: Montserrat; font-weight: bold">What is your cat breed?</h2>
+                        </div>
+                        <p>Upload your cat image and artificial intelligence will recognize your cat's breed.</p>
+                        <form class="contact-from" method="POST" action="{{url_for('home')}}" enctype="multipart/form-data">
+                            <div class="col-md-6">
+                                <label for="img" style="color: white;">Select image:</label>
+                                <input type="file" id="image-selector" name="image">
+                            </div>
+                            <div class="col-md-12">
+                                <button style="background:#fc0254" class="myButton" id="predict-button">Classify</button>
+                            </div>          
+                        </form>
+                    </div>
+                </div>
+               </div> 
+            </center> 
+        </div>
+    </section>   
+    </body>
+</html>
