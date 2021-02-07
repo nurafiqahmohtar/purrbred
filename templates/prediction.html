@@ -26,16 +26,16 @@
             
                 <div class="container-fluid">
                 
-                    {% if data[0] > 0.50 %}
+                    {% if (data[0] > data[1]  and data[0] > data[2] and data[0] > data[3] and data[0] > data[4]) %}
                     <h1 style="font-family: Montserrat; font-weight: bold; color: #fff"><br><br>Your cat is Bengal with <span>{{data[0]}}</span> accuracy<br></h1>
             
-                    {% elif data[1] > 0.50 %}
+                    {% elif data[1] > data[0]  and data[1] > data[2] and data[1] > data[3] and data[1] > data[4]) %}
                     <h1 style="font-family: Montserrat; font-weight: bold; color: #fff"><br><br>Your cat is Bombay with <span>{{data[1]}}</span> accuracy<br></h1>
 
-                    {% elif data[2] > 0.50 %}
+                    {% elif data[2] > data[0]  and data[2] > data[1] and data[2] > data[3] and data[2] > data[4]) %}
                     <h1 style="font-family: Montserrat; font-weight: bold; color: #fff"><br><br>Your cat is Persian with <span>{{data[2]}}</span> accuracy<br></h1>
 
-                    {% elif data[3] > 0.50 %}
+                    {% elif data[3] > data[0]  and data[3] > data[1] and data[3] > data[2] and data[3] > data[4]) %}
                     <h1 style="font-family: Montserrat; font-weight: bold; color: #fff"><br><br>Your cat is Siamese with <span>{{data[3]}}</span> accuracy<br></h1>
 
                     {%else%}
